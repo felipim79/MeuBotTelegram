@@ -8,7 +8,9 @@ print(f"API_ID lido: {API_ID}")  # Isso vai mostrar no log se o valor está corr
 API_ID = int(API_ID)  # Só converter se não for None
 API_HASH = os.getenv("910ab6da6964e3b86b20e561f823ebf")
 BOT_TOKEN = os.getenv("7843820539:AAHGj-bhPmwCwWHKGGXqTwtjfu_oYtdqMOA")
-CANAL_ID = int(os.getenv("-1002421357308"))  # ID do canal onde a transmissão acontecerá
+CANAL_ID = os.getenv("CANAL_ID")
+print(f"CANAL_ID lido: {CANAL_ID}")
+CANAL_ID = int(CANAL_ID)  # Só converter depois de garantir que não está None
 ADMIN_ID = int(os.getenv("7820632930"))  # Seu ID para receber notificações no privado
 
 app = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
