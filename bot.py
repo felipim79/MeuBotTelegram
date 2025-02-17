@@ -3,7 +3,9 @@ import os
 import time
 
 # Configuração do bot
-API_ID = int(os.getenv("27698619"))
+API_ID = os.getenv("API_ID")
+print(f"API_ID lido: {API_ID}")  # Isso vai mostrar no log se o valor está correto
+API_ID = int(API_ID)  # Só converter se não for None
 API_HASH = os.getenv("910ab6da6964e3b86b20e561f823ebf")
 BOT_TOKEN = os.getenv("7843820539:AAHGj-bhPmwCwWHKGGXqTwtjfu_oYtdqMOA")
 CANAL_ID = int(os.getenv("-1002421357308"))  # ID do canal onde a transmissão acontecerá
