@@ -4,14 +4,22 @@ import time
 
 # Configuração do bot
 API_ID = os.getenv("API_ID")
-print(f"API_ID lido: {API_ID}")  # Isso vai mostrar no log se o valor está correto
-API_ID = int(API_ID)  # Só converter se não for None
-API_HASH = os.getenv("910ab6da6964e3b86b20e561f823ebf")
-BOT_TOKEN = os.getenv("7843820539:AAHGj-bhPmwCwWHKGGXqTwtjfu_oYtdqMOA")
+print(f"API_ID lido: {API_ID}")
+API_ID = int(API_ID)  # Converter depois de garantir que não está None
+
+API_HASH = os.getenv("API_HASH")
+print(f"API_HASH lido: {API_HASH}")
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+print(f"BOT_TOKEN lido: {BOT_TOKEN}")
+
 CANAL_ID = os.getenv("CANAL_ID")
 print(f"CANAL_ID lido: {CANAL_ID}")
-CANAL_ID = int(CANAL_ID)  # Só converter depois de garantir que não está None
-ADMIN_ID = int(os.getenv("7820632930"))  # Seu ID para receber notificações no privado
+CANAL_ID = int(CANAL_ID)  # Converter depois de garantir que não está None
+
+ADMIN_ID = os.getenv("ADMIN_ID")
+print(f"ADMIN_ID lido: {ADMIN_ID}")
+ADMIN_ID = int(ADMIN_ID)  # Converter depois de garantir que não está None
 
 app = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
