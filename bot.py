@@ -55,7 +55,19 @@ async def iniciar_transmissao(client, message):
 
     video_id = videos[video_name]
     await message.reply("🎥 Iniciando transmissão ao vivo no canal...")
-    
+
+        # Iniciar a transmissão para o Restream com FFmpeg
+    command = [
+        'ffmpeg',
+        '-re', 
+        '-i', downloaded_file, 
+        '-c:v', 'libx264',
+        '-preset', 'fast', 
+        '-c:a', 'aac', 
+        '-f', 'flv', 
+        f'{rtmp://live.restream.io:1935/live}/{re_9233211_57fe94b181ddc2990e45}'
+    ]
+
     # Simula o início da transmissão ao vivo
     await client.send_video(CANAL_ID, video_id, caption="🔴 Transmissão ao vivo iniciada!")
     
