@@ -21,6 +21,10 @@ ADMIN_ID = os.getenv("ADMIN_ID")
 print(f"ADMIN_ID lido: {ADMIN_ID}")
 ADMIN_ID = int(ADMIN_ID)  # Converter depois de garantir que não está None
 
+# Configurações do Restream
+RTMP_URL = "rtmp://live.restream.io:1935/live"  # URL RTMP do Restream
+STREAM_KEY = "re_9233211_57fe94b181ddc2990e45"  # Substitua pela chave de transmissão do Restream
+
 app = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # Dicionário para armazenar vídeos
